@@ -1,2 +1,4 @@
 import PlayerVideoKunstom from "./PlayerVideoKunstom";
-export default PlayerVideoKunstom;
+import PlayerVideoKunstomPro from "./PlayerVideoKunstom-pro";
+
+export { PlayerVideoKunstom, PlayerVideoKunstomPro };
