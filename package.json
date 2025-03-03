@@ -18,7 +18,8 @@
     "url": "https://github.com/tuo-username/player-video-kunstom.git"
   },
   "dependencies": {
-    "video.js": "^8.21.0"
+    "video.js": "^8.21.0",
+    "videojs-youtube": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
