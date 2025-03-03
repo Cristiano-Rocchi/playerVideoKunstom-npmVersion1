@@ -8,7 +8,7 @@ exports["default"] = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _video = _interopRequireDefault(require("video.js"));
 require("video.js/dist/video-js.css");
-var _PlayerVideoKunstomModule = _interopRequireDefault(require("./PlayerVideoKunstom.module.css"));
+var _PlayerVideoKunstom = _interopRequireDefault(require("./PlayerVideoKunstom.css"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
@@ -258,16 +258,16 @@ var PlayerVideoKunstom = function PlayerVideoKunstom(_ref) {
     title: "Video di Default"
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: _PlayerVideoKunstomModule["default"].playerContainer
+    className: _PlayerVideoKunstom["default"].playerContainer
   }, isMounted && (videoList.length > 0 ? /*#__PURE__*/_react["default"].createElement("div", {
     "data-vjs-player": true
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: _PlayerVideoKunstomModule["default"].videoPlayer
+    className: _PlayerVideoKunstom["default"].videoPlayer
   }, /*#__PURE__*/_react["default"].createElement("video", {
     ref: videoRef,
     className: "video-js"
   }))) : /*#__PURE__*/_react["default"].createElement("div", {
-    className: _PlayerVideoKunstomModule["default"].noVideosMessage
+    className: _PlayerVideoKunstom["default"].noVideosMessage
   }, /*#__PURE__*/_react["default"].createElement("p", null, "\u26A0\uFE0F Nessun video disponibile. Aggiungi una lista di video per iniziare."))));
 };
 var _default = exports["default"] = PlayerVideoKunstom;

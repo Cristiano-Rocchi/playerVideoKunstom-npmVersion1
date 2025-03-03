@@ -1,25 +1,31 @@
 {
   "name": "player-video-kunstom",
-  "version": "1.1.4",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "description": "Un player video basato su Video.js con funzionalità avanzate.",
+  "description": "Un player video basato su Video.js.",
   "keywords": [
     "video player",
     "video.js",
     "react",
     "custom player"
   ],
-  "author": "Il tuo nome",
+  "author": "pizzamafia",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tuo-username/player-video-kunstom.git"
+    "url": "https://github.com/Cristiano-Rocchi/playerVideoKunstom-npmVersion1"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
-    "video.js": "^8.21.0",
-    "videojs-youtube": "^3.0.1"
+    "video.js": "^8.21.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
@@ -33,7 +39,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "babel base pro --out-dir dist --extensions .jsx --copy-files",
+    "build": "babel base --out-dir dist --extensions .jsx --copy-files",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
