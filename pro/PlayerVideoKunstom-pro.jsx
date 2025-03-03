@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "./PlayerVideoKunstom-pro.css";
+import styles from "./PlayerVideoKunstom-pro.module.css";
+
 import "videojs-youtube";
 
 const PlayerVideoKunstomPro = ({
@@ -664,13 +665,15 @@ const PlayerVideoKunstomPro = ({
 
   return (
     <div
-      className={`player-container ${darkMode ? "dark-mode" : "light-mode"}  `}
+      className={`${styles.playerContainer} ${
+        darkMode ? styles.darkMode : styles.lightMode
+      }`}
     >
       {isMounted &&
         (videoList.length > 0 ? (
           <div data-vjs-player>
             <div
-              className={`video-player ${sizeClass}`}
+              className={`${styles.videoPlayer} ${styles[sizeClass]}`}
               style={{
                 width: width || "100%",
               }}
@@ -679,7 +682,7 @@ const PlayerVideoKunstomPro = ({
             </div>
           </div>
         ) : (
-          <div className="no-videos-message">
+          <div className={styles.noVideosMessage}>
             <p>
               ⚠️ Nessun video disponibile. Aggiungi una lista di video per
               iniziare.

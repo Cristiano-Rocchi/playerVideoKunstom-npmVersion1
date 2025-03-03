@@ -8,7 +8,7 @@ exports["default"] = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _video = _interopRequireDefault(require("video.js"));
 require("video.js/dist/video-js.css");
-require("./PlayerVideoKunstom-pro.css");
+var _PlayerVideoKunstomProModule = _interopRequireDefault(require("./PlayerVideoKunstom-pro.module.css"));
 require("videojs-youtube");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
@@ -619,11 +619,11 @@ var PlayerVideoKunstomPro = function PlayerVideoKunstomPro(_ref) {
     title: "Video di Default"
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: "player-container ".concat(darkMode ? "dark-mode" : "light-mode", "  ")
+    className: "".concat(_PlayerVideoKunstomProModule["default"].playerContainer, " ").concat(darkMode ? _PlayerVideoKunstomProModule["default"].darkMode : _PlayerVideoKunstomProModule["default"].lightMode)
   }, isMounted && (videoList.length > 0 ? /*#__PURE__*/_react["default"].createElement("div", {
     "data-vjs-player": true
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "video-player ".concat(sizeClass),
+    className: "".concat(_PlayerVideoKunstomProModule["default"].videoPlayer, " ").concat(_PlayerVideoKunstomProModule["default"][sizeClass]),
     style: {
       width: width || "100%"
     }
@@ -631,7 +631,7 @@ var PlayerVideoKunstomPro = function PlayerVideoKunstomPro(_ref) {
     ref: videoRef,
     className: "video-js"
   }))) : /*#__PURE__*/_react["default"].createElement("div", {
-    className: "no-videos-message"
+    className: _PlayerVideoKunstomProModule["default"].noVideosMessage
   }, /*#__PURE__*/_react["default"].createElement("p", null, "\u26A0\uFE0F Nessun video disponibile. Aggiungi una lista di video per iniziare."))));
 };
 var _default = exports["default"] = PlayerVideoKunstomPro;

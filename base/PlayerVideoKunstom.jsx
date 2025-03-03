@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "./PlayerVideoKunstom.css";
+import styles from "./PlayerVideoKunstom.module.css";
 
 const PlayerVideoKunstom = ({
   videoList = [],
@@ -267,16 +267,16 @@ const PlayerVideoKunstom = ({
   };
 
   return (
-    <div className="player-container">
+    <div className={styles.playerContainer}>
       {isMounted &&
         (videoList.length > 0 ? (
           <div data-vjs-player>
-            <div className="video-player">
+            <div className={styles.videoPlayer}>
               <video ref={videoRef} className="video-js" />
             </div>
           </div>
         ) : (
-          <div className="no-videos-message">
+          <div className={styles.noVideosMessage}>
             <p>
               ⚠️ Nessun video disponibile. Aggiungi una lista di video per
               iniziare.
